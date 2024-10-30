@@ -16,6 +16,7 @@ Create bucket where objects can’t be modified and all requests are logged.
 - Open the AWS S3 Console and click Create bucket.
 - Enter a unique bucket name, select a region, and enable Object Lock.
 - Click Create bucket. After creation, Object Lock settings cannot be changed.
+  ![files](/images/files.png)
 
 2. Configure Object Lock:
 
@@ -23,7 +24,7 @@ Create bucket where objects can’t be modified and all requests are logged.
 - Scroll down to Object Lock and click Edit.
 - Enable Object Lock and choose Compliance mode.
 - Set a retention period, e.g., 30 days.
-![object-lock](/images/object-lock.png)
+  ![object-lock](/images/object-lock.png)
 
 3. Create a separate bucket for logs:
 
@@ -31,14 +32,15 @@ Create bucket where objects can’t be modified and all requests are logged.
 - Enter a unique bucket name for the logging bucket and select the same region as the main bucket.
 - This bucket does not need Object Lock enabled.
 - Click Create bucket.
-![backets](/images/backets.png)
+  ![backets](/images/backets.png)
 
 4. Enable logging for the same bucket:
 
 - In the Properties tab of the main bucket, scroll down to Server access logging.
 - Click Edit, enable logging, and choose the separate bucket created in step 3 as the target for storing logs.
 - (Optional) Set a prefix for logs, e.g., logs/.
-![loging](/images/loging.png)
+  ![loging](/images/loging.png)
+  ![logs](/images/logs.png)
 
 ## Project Structure
 
